@@ -1,0 +1,6 @@
+{
+    "/Pharmacy": {
+      "target": "https://localhost:7114",
+      "secure": false
+    }
+  }

@@ -1,0 +1,8 @@
+.background{
+    width: 100%;
+    display: flex;
+}
+
+.grid {
+    margin: 100px;
+}

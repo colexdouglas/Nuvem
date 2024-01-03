@@ -1,0 +1,83 @@
+<kendo-grid [kendoGridReactiveEditing]="createFormGroup" [kendoGridBinding]="pharmacy"
+[pageable]="true" [sortable]="true" [navigable]="true">
+
+    <kendo-grid-column field="pharmacyId" title="ID"> </kendo-grid-column>
+
+    <kendo-grid-column field="name" title="Name">
+    </kendo-grid-column>
+
+    <kendo-grid-column field="address" title="Address">
+        <ng-template kendoGridEditTemplate let-dataItem="dataItem">
+            <input
+            [(ngModel)]="dataItem.address"
+            kendoGridFocusable
+            name="address"
+            class="k-textbox k-input k-rounded-md"
+            />
+        </ng-template>
+    </kendo-grid-column>
+
+    <kendo-grid-column field="city" title="City">
+        <ng-template kendoGridEditTemplate let-dataItem="dataItem">
+            <input
+            [(ngModel)]="dataItem.city"
+            kendoGridFocusable
+            name="city"
+            class="k-textbox k-input k-rounded-md"
+            
+            />
+        </ng-template>
+    </kendo-grid-column>
+
+    <kendo-grid-column field="state" title="State">
+        <ng-template kendoGridEditTemplate let-dataItem="dataItem">
+            <input
+            [(ngModel)]="dataItem.state"
+            kendoGridFocusable
+            name="state"
+            class="k-textbox k-input k-rounded-md"
+            
+            />
+        </ng-template>
+    </kendo-grid-column>
+
+    <kendo-grid-column field="zip" title="Zip">
+        <ng-template kendoGridEditTemplate let-dataItem="dataItem">
+            <input
+            [(ngModel)]="dataItem.zip"
+            kendoGridFocusable
+            name="zip"
+            class="k-textbox k-input k-rounded-md"
+            
+            />
+        </ng-template>
+    </kendo-grid-column>
+
+    <kendo-grid-column field="prescriptionsFilled" title="Prescriptions Filled">
+        <ng-template kendoGridEditTemplate let-dataItem="dataItem">
+            <input
+            [(ngModel)]="dataItem.prescriptionsFilled"
+            kendoGridFocusable
+            name="prescriptionsFilled"
+            class="k-textbox k-input k-rounded-md"
+            />
+        </ng-template>
+    </kendo-grid-column>
+
+    <kendo-grid-column field="createdDate" title="Created Date"> </kendo-grid-column>
+
+    <kendo-grid-column field="updatedDate" title="Updated Date"> </kendo-grid-column>
+
+    <kendo-grid-command-column title="command" [width]="220">
+        <ng-template kendoGridCellTemplate let-isNew="isNew" let-dataItem="dataItem">
+          <button kendoGridEditCommand [primary]="true">Edit</button>
+          <button kendoGridRemoveCommand>Remove</button>
+          <button kendoGridSaveCommand (click)="updatePharmacy(dataItem)" [disabled]="formGroup.invalid">
+            {{ isNew ? "Add" : "Update" }}
+          </button>
+          <button kendoGridCancelCommand >
+            {{ isNew ? "Discard changes" : "Cancel" }}
+          </button>
+        </ng-template>
+      </kendo-grid-command-column>
+</kendo-grid>
