@@ -1,3 +1,8 @@
 
 *.config
 *.vsidx
+.vs/Nuvem/DesignTimeBuild/.dtbcache.v2
+.vs/Nuvem/v17/.futdcache.v2
+.vs/Nuvem/v17/.suo
+.vs/ProjectEvaluation/nuvem.metadata.v7.bin
+.vs/ProjectEvaluation/nuvem.projects.v7.bin
