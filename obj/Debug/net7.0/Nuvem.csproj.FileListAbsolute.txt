@@ -81,3 +81,4 @@ C:\Users\colex\Documents\OfflineChat\Nuvem\bin\Debug\net7.0\app.ui\app.ui\tsconf
 C:\Users\colex\Documents\OfflineChat\Nuvem\bin\Debug\net7.0\app.ui\app.ui\tsconfig.json
 C:\Users\colex\Documents\OfflineChat\Nuvem\bin\Debug\net7.0\app.ui\app.ui\tsconfig.spec.json
 C:\Users\colex\Documents\OfflineChat\Nuvem\bin\Debug\net7.0\app.ui\app.ui\proxy.conf.json
+C:\Users\colex\Documents\OfflineChat\Nuvem\obj\Debug\net7.0\Nuvem.sourcelink.json

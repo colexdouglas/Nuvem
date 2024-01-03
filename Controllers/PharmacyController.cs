@@ -10,12 +10,6 @@ namespace Nuvem.Controllers
     public class PharmacyController : ControllerBase
     {
         private PharmacyDBContext _pharmacyDBContext;
-        private static readonly string[] Summaries = new[]
-        {
-            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-        };
-
-        
 
         public PharmacyController(PharmacyDBContext pharmacyDBContext)
         {
@@ -28,15 +22,16 @@ namespace Nuvem.Controllers
             return _pharmacyDBContext.Pharmacys;
         }
 
-        // PUT api/<EmployeeController>/5
         [HttpPut("{id}")]
         public string Put(int id,[FromBody] Pharmacy value)
         {
             var pharmacy = _pharmacyDBContext.Pharmacys.FirstOrDefault(s => s.PharmacyId == id);
+            
             if (pharmacy != null)
             {
                 try 
                 {
+                    value.UpdatedDate = DateTime.Now;
                     _pharmacyDBContext.Entry<Pharmacy>(pharmacy).CurrentValues.SetValues(value);
                     _pharmacyDBContext.SaveChanges();
                     return "success";

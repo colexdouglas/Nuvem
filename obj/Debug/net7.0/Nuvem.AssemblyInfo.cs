@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Nuvem")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dcbeb805b6a40577d7cd70579614b2b3d482fcde")]
 [assembly: System.Reflection.AssemblyProductAttribute("Nuvem")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Nuvem")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
